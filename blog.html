@@ -1,0 +1,16 @@
+---
+layout: default
+title: Blog
+---
+<div class="latest-posts-container">
+  <h1 class="filtered-thoughts-title">Filtered Thoughts</h1>
+
+  <ul class="latest-posts-list">
+    {% for post in site.posts %}
+      <li>
+        {% assign date = post.date | date: "%b '%y" %}
+        {{ date }} <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

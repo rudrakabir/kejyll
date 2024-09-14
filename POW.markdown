@@ -28,12 +28,10 @@ I really enjoyed my time at Motojojo. We grew very fast, and I got to work with 
 
 
 ## Vrinsoft
-(Dec 2019 - Jan 2021)
 Vrinsoft was my first true "job". It was a software and web development company, and I initially joined there as a writer.  I started working there Part time, eventually joining full time. Covid ended my time there, but that job got me to write the most regularly I have ever written in my life, and taught me how to discipline myself very well. 
 
 
 ## Radio Nazariya
-(Jan 2022 - Jul 2022)
 Radio Nazariya is a community Radio station under Drishti Foundation in Ahmedabad, an organisation that works to promote the participation of people, espececially women, in local governance.
 I was lucky enough to be a part of the team there, and facilitate and participate in the development of their fellowship program, during which
 - Provided 1:1 mentoring and technical assistance to program fellows, supporting their community development and local governance initiatives.

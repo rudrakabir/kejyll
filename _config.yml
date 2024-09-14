@@ -19,13 +19,14 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Rudra Kabir.
-email: rudrakabir+site@gmail.com
+email: kabir@rudrakabir.com
 description: >- # this means to ignore newlines until "baseurl:"
   Hi, i am rudra kabir. As an aspiring designer, maker and builder, I want to build things and spaces to transform the way we think. I am based out of Ahmedabad.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://rudrakabir.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: rudrakabir
 github_username:  rudrakabir
+linkedin_username: rudrakabir
 
 # Build settings
 theme: minima
