@@ -12,6 +12,6 @@ As a passionate and multidisciplinary creative, I thrive at the intersection of 
 
 I'm always excited to collaborate on projects that push the boundaries of what's possible. Whether you have a specific project in mind or just want to chat about design and innovation, I'd love to hear from you.
 
-Feel free to reach out via email or twitter. 
+Feel free to reach out via email or Twitter. 
 
 
