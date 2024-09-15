@@ -268,3 +268,43 @@
 .latest-posts-list li {
   margin-bottom: 10px;  /* Adds some space between list items */
 }
+
+.trakt-embed {
+  font-family: Arial, sans-serif;
+  max-width: 500px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+.trakt-embed h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+.trakt-embed .item {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: start;
+}
+.trakt-embed .item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.trakt-embed .item-image {
+  width: 100px;
+  margin-right: 15px;
+}
+.trakt-embed .item-details {
+  flex-grow: 1;
+}
+.trakt-embed p {
+  margin: 5px 0;
+  color: #34495e;
+}
+.trakt-embed .timestamp {
+  font-size: 0.8em;
+  color: #7f8c8d;
+}
