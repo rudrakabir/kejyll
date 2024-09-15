@@ -2,7 +2,6 @@ import requests
 import os
 from datetime import datetime
 
-# Use environment variables directly (GitHub Actions will set these)
 TRAKT_CLIENT_ID = os.environ['TRAKT_CLIENT_ID']
 TRAKT_CLIENT_SECRET = os.environ['TRAKT_CLIENT_SECRET']
 TRAKT_REFRESH_TOKEN = os.environ['TRAKT_REFRESH_TOKEN']
@@ -29,14 +28,14 @@ TRAKT_TV_ENDPOINT = 'https://api.trakt.tv/users/me/history/shows'
 TRAKT_MOVIE_ENDPOINT = 'https://api.trakt.tv/users/me/history/movies'
 TMDB_TV_URL = 'https://api.themoviedb.org/3/tv/'
 TMDB_MOVIE_URL = 'https://api.themoviedb.org/3/movie/'
-TMDB_IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w200'  # Using width 200px images
+TMDB_IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w200'
 
 # Headers
 trakt_headers = {
     'Content-Type': 'application/json',
     'trakt-api-version': '2',
     'trakt-api-key': TRAKT_CLIENT_ID,
-    'Authorization': f'Bearer {TRAKT_ACCESS_TOKEN}'
+    'Authorization': f'Bearer {ACCESS_TOKEN}'
 }
 
 tmdb_headers = {
@@ -73,7 +72,7 @@ def get_tmdb_image(tmdb_id, media_type):
 last_show = fetch_last_watched(TRAKT_TV_ENDPOINT)
 last_movie = fetch_last_watched(TRAKT_MOVIE_ENDPOINT)
 
-
+# Generate HTML
 html_content = """
 <div class="trakt-embed">
     <h3>Last Watched on Trakt</h3>
