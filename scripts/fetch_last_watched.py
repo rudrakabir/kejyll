@@ -3,16 +3,24 @@ import os
 from datetime import datetime
 import sys
 
+
+
+# Redirect stderr to a file
 sys.stderr = open('error_log.txt', 'w')
+
+print("Checking environment variables:")
+print(f"TRAKT_CLIENT_ID: {'Set' if 'TRAKT_CLIENT_ID' in os.environ else 'Not set'}")
+print(f"TRAKT_CLIENT_SECRET: {'Set' if 'TRAKT_CLIENT_SECRET' in os.environ else 'Not set'}")
+print(f"TRAKT_REFRESH_TOKEN: {'Set' if 'TRAKT_REFRESH_TOKEN' in os.environ else 'Not set'}")
+print(f"TMDB_ACCESS_TOKEN: {'Set' if 'TMDB_ACCESS_TOKEN' in os.environ else 'Not set'}")
 
 TRAKT_CLIENT_ID = os.environ['TRAKT_CLIENT_ID']
 TRAKT_CLIENT_SECRET = os.environ['TRAKT_CLIENT_SECRET']
 TRAKT_REFRESH_TOKEN = os.environ['TRAKT_REFRESH_TOKEN']
 TMDB_ACCESS_TOKEN = os.environ['TMDB_ACCESS_TOKEN']
 
-
-
 def refresh_access_token():
+    print("Attempting to refresh access token...")
     response = requests.post(
         'https://api.trakt.tv/oauth/token',
         json={
@@ -23,6 +31,9 @@ def refresh_access_token():
             'grant_type': 'refresh_token'
         }
     )
+    print(f"Token refresh status code: {response.status_code}")
+    print(f"Token refresh response: {response.text}")
+    
     if response.status_code != 200:
         print(f"Error refreshing token. Status code: {response.status_code}")
         print(f"Response content: {response.text}")
@@ -36,7 +47,12 @@ def refresh_access_token():
     return data['access_token']
 
 # Get a fresh access token
-ACCESS_TOKEN = refresh_access_token()
+try:
+    ACCESS_TOKEN = refresh_access_token()
+    print("Successfully refreshed access token.")
+except Exception as e:
+    print(f"Failed to refresh access token: {str(e)}")
+    sys.exit(1)
 
 print("Checking environment variables:")
 print(f"TRAKT_CLIENT_ID: {'Set' if 'TRAKT_CLIENT_ID' in os.environ else 'Not set'}")
