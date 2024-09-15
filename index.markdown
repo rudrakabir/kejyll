@@ -6,7 +6,7 @@ layout: page
 ---
 Hi, I am Rudra Kabir. 
 
-- this is the home of my blog.
+- this is the center of digital identity.
 - if you want to see my notes in progress/digital garden, you can find it [here](https://notes.rudrakabir.com).
 - my credentials are [here](/POW).
 

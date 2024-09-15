@@ -12,4 +12,4 @@ Here you will find my various musings and insights on a variety of topics that i
 
 Think of it as a lab, or a workshop, where stuff is still happening, and the outcome is still…undetermined. All writing here is considered WIP, and living. 
 
-To view, please visit [notes](https://notes.rudrakabir.com/notes)
+To view, please visit [notes](https://notes.rudrakabir.com)
