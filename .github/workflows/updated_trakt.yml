@@ -29,7 +29,19 @@ jobs:
         TRAKT_CLIENT_SECRET: ${{ secrets.TRAKT_CLIENT_SECRET }}
         TRAKT_REFRESH_TOKEN: ${{ secrets.TRAKT_REFRESH_TOKEN }}
         TMDB_ACCESS_TOKEN: ${{ secrets.TMDB_ACCESS_TOKEN }}
-      run: python scripts/fetch_last_watched.py
+      run: |
+        python scripts/fetch_last_watched.py
+      continue-on-error: true
+    
+    - name: Check for errors
+      if: failure()
+      run: |
+        if [ -f error_log.txt ]; then
+          echo "Error log contents:"
+          cat error_log.txt
+        else
+          echo "No error log found."
+        fi
     
     - name: Commit and push if changed
       run: |

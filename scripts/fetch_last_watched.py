@@ -1,11 +1,16 @@
 import requests
 import os
 from datetime import datetime
+import sys
+
+sys.stderr = open('error_log.txt', 'w')
 
 TRAKT_CLIENT_ID = os.environ['TRAKT_CLIENT_ID']
 TRAKT_CLIENT_SECRET = os.environ['TRAKT_CLIENT_SECRET']
 TRAKT_REFRESH_TOKEN = os.environ['TRAKT_REFRESH_TOKEN']
 TMDB_ACCESS_TOKEN = os.environ['TMDB_ACCESS_TOKEN']
+
+
 
 def refresh_access_token():
     response = requests.post(
@@ -18,10 +23,26 @@ def refresh_access_token():
             'grant_type': 'refresh_token'
         }
     )
-    return response.json()['access_token']
+    if response.status_code != 200:
+        print(f"Error refreshing token. Status code: {response.status_code}")
+        print(f"Response content: {response.text}")
+        raise Exception("Failed to refresh token")
+    
+    data = response.json()
+    if 'access_token' not in data:
+        print(f"Unexpected response format. Received data: {data}")
+        raise Exception("Access token not found in response")
+    
+    return data['access_token']
 
 # Get a fresh access token
 ACCESS_TOKEN = refresh_access_token()
+
+print("Checking environment variables:")
+print(f"TRAKT_CLIENT_ID: {'Set' if 'TRAKT_CLIENT_ID' in os.environ else 'Not set'}")
+print(f"TRAKT_CLIENT_SECRET: {'Set' if 'TRAKT_CLIENT_SECRET' in os.environ else 'Not set'}")
+print(f"TRAKT_REFRESH_TOKEN: {'Set' if 'TRAKT_REFRESH_TOKEN' in os.environ else 'Not set'}")
+print(f"TMDB_ACCESS_TOKEN: {'Set' if 'TMDB_ACCESS_TOKEN' in os.environ else 'Not set'}")
 
 # API endpoints
 TRAKT_TV_ENDPOINT = 'https://api.trakt.tv/users/me/history/shows'
@@ -115,3 +136,5 @@ with open('_includes/trakt_embed.html', 'w') as f:
     f.write(html_content)
 
 print("HTML embed file generated and saved as '_includes/trakt_embed.html'")
+
+sys.stderr.close()
