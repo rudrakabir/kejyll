@@ -58,10 +58,7 @@ last_show = fetch_last_watched(TRAKT_TV_ENDPOINT)
 last_movie = fetch_last_watched(TRAKT_MOVIE_ENDPOINT)
 
 
-jekyll_content = """---
-layout: none
----
-
+html_content = """
 <div class="trakt-embed">
     <h3>Last Watched on Trakt</h3>
 """
@@ -71,7 +68,7 @@ if last_show:
     episode = last_show['episode']
     watched_at = datetime.fromisoformat(last_show['watched_at'].replace('Z', '+00:00'))
     image_url = get_tmdb_image(show['ids']['tmdb'], 'tv')
-    jekyll_content += f"""
+    html_content += f"""
     <div class="item">
         <img class="item-image" src="{image_url or '/path/to/default/image.jpg'}" alt="{show['title']}">
         <div class="item-details">
@@ -86,7 +83,7 @@ if last_movie:
     movie = last_movie['movie']
     watched_at = datetime.fromisoformat(last_movie['watched_at'].replace('Z', '+00:00'))
     image_url = get_tmdb_image(movie['ids']['tmdb'], 'movie')
-    jekyll_content += f"""
+    html_content += f"""
     <div class="item">
         <img class="item-image" src="{image_url or '/path/to/default/image.jpg'}" alt="{movie['title']}">
         <div class="item-details">
@@ -96,10 +93,10 @@ if last_movie:
     </div>
     """
 
-jekyll_content += "</div>"
+html_content += "</div>"
 
-# Save Jekyll-friendly content
+# Save HTML to file
 with open('_includes/trakt_embed.html', 'w') as f:
-    f.write(jekyll_content)
+    f.write(html_content)
 
-print("Jekyll include file generated and saved as '_includes/trakt_embed.html'")
+print("HTML embed file generated and saved as '_includes/trakt_embed.html'")
