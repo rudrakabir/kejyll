@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/runner/work/kejyll/kejyll/scripts/fetch_last_watched.py", line 39, in <module>
+    ACCESS_TOKEN = refresh_access_token()
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/kejyll/kejyll/scripts/fetch_last_watched.py", line 29, in refresh_access_token
+    raise Exception("Failed to refresh token")
+Exception: Failed to refresh token
