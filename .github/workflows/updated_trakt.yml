@@ -2,8 +2,8 @@ name: Update Trakt Data
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Runs every 6 hours
-  workflow_dispatch:  # Allows manual triggering
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
 
 jobs:
   update-trakt:
@@ -26,7 +26,8 @@ jobs:
     - name: Run Trakt script
       env:
         TRAKT_CLIENT_ID: ${{ secrets.TRAKT_CLIENT_ID }}
-        TRAKT_ACCESS_TOKEN: ${{ secrets.TRAKT_ACCESS_TOKEN }}
+        TRAKT_CLIENT_SECRET: ${{ secrets.TRAKT_CLIENT_SECRET }}
+        TRAKT_REFRESH_TOKEN: ${{ secrets.TRAKT_REFRESH_TOKEN }}
         TMDB_ACCESS_TOKEN: ${{ secrets.TMDB_ACCESS_TOKEN }}
       run: python scripts/fetch_last_watched.py
     

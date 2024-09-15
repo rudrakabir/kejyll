@@ -4,9 +4,25 @@ from datetime import datetime
 
 # Use environment variables directly (GitHub Actions will set these)
 TRAKT_CLIENT_ID = os.environ['TRAKT_CLIENT_ID']
-TRAKT_ACCESS_TOKEN = os.environ['TRAKT_ACCESS_TOKEN']
+TRAKT_CLIENT_SECRET = os.environ['TRAKT_CLIENT_SECRET']
+TRAKT_REFRESH_TOKEN = os.environ['TRAKT_REFRESH_TOKEN']
 TMDB_ACCESS_TOKEN = os.environ['TMDB_ACCESS_TOKEN']
 
+def refresh_access_token():
+    response = requests.post(
+        'https://api.trakt.tv/oauth/token',
+        json={
+            'refresh_token': TRAKT_REFRESH_TOKEN,
+            'client_id': TRAKT_CLIENT_ID,
+            'client_secret': TRAKT_CLIENT_SECRET,
+            'redirect_uri': 'urn:ietf:wg:oauth:2.0:oob',
+            'grant_type': 'refresh_token'
+        }
+    )
+    return response.json()['access_token']
+
+# Get a fresh access token
+ACCESS_TOKEN = refresh_access_token()
 
 # API endpoints
 TRAKT_TV_ENDPOINT = 'https://api.trakt.tv/users/me/history/shows'
