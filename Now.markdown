@@ -14,8 +14,21 @@ I've been noodling about on this website as a live server on my local machine fo
 # Body
 I have been heavily focused on taking care of my body. I started going to the gym regularly, worked on fixing my diet and sleep schedules, and the payoff has been marvelous. I also went to Himachal for a month in June for a Yoga course, to further that same quest. I am absolutely loving that, and I have reaped so much from it. 
 
+## Music
+[last.fm](https://www.last.fm/user/rudrakabir) is basically a direct conduit into what the inside of my head feels like which is kinda wack if you ask me.
+
+I am really enjoying Sabrina Carpenter right now, as well as the movie album from Lakshya.
 
 
+## Reading
+I am working my way through Human Universals, by Donald Brown. I came across it from the wikipedia article on Human Universals, which I thought was really interesting. Basically, there are certain things that cultures develop independently, called universals. 
+
+
+
+### X-risk
+I am really obsessing over the current issues around the existential risks that are facing humanity right now. We have never been more able to wipe ourselves off the face off the planet, and that this can now be done _on accident_ scares me. 
+
+Includes but not limited to climate change, AI S-risk, and of course the usual suspects of war famine and pestilence.
 
 
 
