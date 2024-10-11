@@ -18,4 +18,8 @@ I’m addicted to starting over. When I start doing something, anything, I have 
 
 This resulted in the gameplay loop for me becoming about building up the factory until the point where it would start making sense to use trains, but I had figured out how to use conveyer belts really well at that point, and I sucked at using trains, so I would just tear down the whole factory, and rebuild it better using conveyer belts, ad nauseum. I made some really cool stuff, yes, but my factory wasn’t able to grow past a certain size, because I would keep starting over. I had beautiful conveyer belt patterns at that point, and I wanted pretty train designs too. 
 
-Finally, I did figure out trains. And signalling. I enjoy the game much more now. 
+Trains are unfortunately far more complex than belts, so it did take a while for me to figure out. With belts, you have a start point, and an end point. You can pick up and drop anywhere, and the belt keeps moving. Trains are different. They can go multiple directions, you have to signal and schedule yourself, and you have to figure out what to do with the train itself once it gets to the end. Oh, and trains need fueling, conveyer belts don't even need electricity. 
+
+But I did figure trains out eventually, sticking with the frustration was worth it. And it was worth it too. It took me four years of playing factorio to launch my first rocket, and it was the only rocket my factory made for a few hours. On my most recent factorio run, I can launch a rocket about 1 time every minute.(that would be very cool if you play the game)
+
+This applies to life too. I love starting and trying new things, but once the initial novelty wears off and the new novelty will only be unlocked after grinding, I start over and try something else. Its lead me to cultivate enormous breadth over the years, and skills as a generalist, but depth is achieved through delibrate practice, and I want to launch many many rockets. 
