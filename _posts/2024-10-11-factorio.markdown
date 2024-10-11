@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "I'm addicted to starting over"
+date:   2024-09-15 03:26:03 +0530
+categories: jekyll update
+---
+I play Factorio, better known as Cracktorio, for its ability to hook you into its insane gameplay loop and keep you building factories until the wee hours of the morning. The game features a lot of mechanics that take some time to figure out how to use within the game, and the way they intersect with each other drives you absolutely crazy. 
+
+The game has a simple goal: make stuff, to eventually build a rocket, out of simple stuff like iron ore and stone. This involves setting up mini factories to gradually make more complex product, until you end up with a rocket. One of the basic problems in the game is one of logistics: how to get one thing from one place to another, in the quantity and time required. Bottlenecks are the enemy and can frequently hold up production. The factory MUST grow. 
+
+There are several options you can use. In the beginning, you use your personal inventory to shuffle stuff from one place to another. Then, you can build boxes to store stuff in, and have machines pick up directly from them. You gradually move on to more complex stuff, like conveyer belts, cars, drones, trains and giant mecha spiders. Each come with their own tradeoffs. Drones can drop stuff anywhere, but are expensive to make, and slow in quantity. Trains have HUGE storage, but take time to arrive, and building the tracks across the map is complicated, and signaling is complicated, and it’s just…complicated. Conveyer belts are the optimal solution in the midgame, but after a certain point if the factory has to grow, it needs trains. 
+
+(already as I am writing this I want to delete this post and start over(this will make sense in a bit))
+
+This is a metaphor for life, but starts as a Factorio analogy. I’ve learnt a lot from this game, and this is one of those things. I’ve been playing Factorio since I was in School, about 10 years now. Not continuously, I stopped for a good few years in the middle, but it’s a game I am intimately familiar with. Even so, it wasn’t until 2 years back that I finally figured out trains. Why?
+
+I’m addicted to starting over. When I start doing something, anything, I have a vision of what the finished product could look like. As I continue doing it, my skills at the thing improve, and my theoretically possible finished product quality gets better as well, but only if I’d known that from the start. The technical debt prevents me from changing course in the middle. 
+
+This resulted in the gameplay loop for me becoming about building up the factory until the point where it would start making sense to use trains, but I had figured out how to use conveyer belts really well at that point, and I sucked at using trains, so I would just tear down the whole factory, and rebuild it better using conveyer belts, ad nauseum. I made some really cool stuff, yes, but my factory wasn’t able to grow past a certain size, because I would keep starting over. I had beautiful conveyer belt patterns at that point, and I wanted pretty train designs too. 
+
+Finally, I did figure out trains. And signalling. I enjoy the game much more now. 
