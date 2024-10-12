@@ -1,0 +1,33 @@
+form[name="newsletter"] {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  form[name="newsletter"] label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  form[name="newsletter"] input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  form[name="newsletter"] button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  form[name="newsletter"] button:hover {
+    background-color: #0056b3;
+  }

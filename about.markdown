@@ -18,3 +18,4 @@ I'm always excited to collaborate on projects that push the boundaries of what's
 Feel free to reach out via email or Twitter. 
 
 
+{% include newsletter.html %}
