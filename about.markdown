@@ -19,3 +19,5 @@ Feel free to reach out via email or Twitter.
 
 
 {% include form.html %}
+
+thanks
