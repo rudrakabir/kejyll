@@ -2,7 +2,7 @@
 layout: post
 title:  "I'm addicted to starting over"
 date:   2024-10-11 03:26:03 +0530
-categories: jekyll update
+categories: thoughts
 ---
 I play Factorio, better known as Cracktorio, for its ability to hook you into its insane gameplay loop and keep you building factories until the wee hours of the morning. The game features a lot of mechanics that take some time to figure out how to use within the game, and the way they intersect with each other drives you absolutely crazy. 
 
