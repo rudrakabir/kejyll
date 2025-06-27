@@ -3,12 +3,19 @@ layout: page
 title: POW
 permalink: /POW/
 ---
-(last updated 2024-07-28)
+Some of the other stuff I like to do, that's not quite work but work nonetheless.
+(last updated 2025-03-28)
 
 ## Third Place Venture Studio
 I am currently building Third Place Venture Studio, my own little workshop for the ideas I want to test out. Everything I have done so far is under this banner, as well as my Freelance work. 
 - Web development, for medium scale enterprises 
 - Networking, IT infrastructure, backups, you name it, for the same
+- Content Strategy, Social Media, Writing, Graphic Design, All of it. 
+
+## AU TA
+I did a semester as a teaching assistant at Ahmedabad university, for their Critical Thinking and Writing course centered around Social Responsibility and the Environment.
+
+I had a class of 21 students, across multiple majors, across a 2 month writing focused intensive. IT WAS AWESOME. I had a tough time in school as a student, and had sworn off academia forever, but this was an interesting look at the other side. Fun Stuff.
 
 ## On The Jungle Floor
 On the jungle floor is a Vinyl Shop in Bangalore, one of the finest. They organise events and pop up stores, as well as have a physical setup to demo and sell records.
