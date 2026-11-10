@@ -37,5 +37,72 @@ Includes but not limited to climate change, AI S-risk, and of course the usual s
 
 
 
-{% include trakt_embed.html %}
+<div class="trakt-embed" id="now-trakt-widget">
+  <h3>Last Watched on Trakt</h3>
+  <div class="trakt-items"></div>
+  <p><a href="https://trakt.tv/users/rudrakabir/history">View my watch history on Trakt</a></p>
+</div>
+<script>
+(() => {
+  const target = document.querySelector('#now-trakt-widget .trakt-items');
+  const feed = 'https://raw.githubusercontent.com/rudrakabir/Trakt-Embed/main/trakt_data.json';
+  const dateFormat = new Intl.DateTimeFormat(undefined, {
+    day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC'
+  });
+  function detail(parent, label, value) {
+    const row = document.createElement('p');
+    const name = document.createElement('strong');
+    name.textContent = label + ':';
+    row.append(name, ' ' + value);
+    parent.append(row);
+  }
+  function card(item) {
+    if (!item || typeof item.title !== 'string' || !item.title.trim() ||
+        item.date_precision !== 'day' || !/^\d{4}-\d{2}-\d{2}$/.test(item.watched_at)) {
+      throw new Error('Invalid Trakt feed entry');
+    }
+    const watched = new Date(item.watched_at);
+    if (Number.isNaN(watched.valueOf()) || watched.toISOString().slice(0, 10) !== item.watched_at) {
+      throw new Error('Invalid Trakt watch date');
+    }
+    const row = document.createElement('div');
+    row.className = 'item';
+    if (typeof item.poster === 'string' && /^https:\/\/image\.tmdb\.org\/t\/p\/w200\/[A-Za-z0-9_.-]+$/.test(item.poster)) {
+      const image = document.createElement('img');
+      image.className = 'item-image';
+      image.alt = '';
+      image.loading = 'lazy';
+      image.src = item.poster;
+      row.append(image);
+    }
+    const details = document.createElement('div');
+    details.className = 'item-details';
+    detail(details, item.type === 'episodes' ? 'TV Show' : 'Movie', item.title);
+    if (item.type === 'episodes' && typeof item.episode === 'string') {
+      detail(details, 'Episode', item.episode);
+    }
+    const timestamp = document.createElement('p');
+    timestamp.className = 'timestamp';
+    const time = document.createElement('time');
+    time.dateTime = item.watched_at;
+    time.textContent = dateFormat.format(watched);
+    timestamp.append('Watched: ', time);
+    details.append(timestamp);
+    row.append(details);
+    return row;
+  }
+  fetch(feed, { credentials: 'omit' })
+    .then(response => {
+      if (!response.ok) throw new Error('Trakt feed unavailable');
+      return response.json();
+    })
+    .then(data => {
+      if (data.version !== 1 || !Array.isArray(data.items)) throw new Error('Invalid Trakt feed');
+      const cards = ['episodes', 'movies'].map(type => card(data.items.find(item => item?.type === type)));
+      target.replaceChildren(...cards);
+    })
+    .catch(() => { target.textContent = 'Recent watch history is temporarily unavailable.'; });
+})();
+</script>
+
 Inspired by [sive.rs](https://sive.rs/now) but with my own spin on it. 
