@@ -23,6 +23,91 @@ I have been heavily focused on taking care of my body. I started going to the gy
 
 I am really enjoying Sabrina Carpenter right now, as well as the movie album from Lakshya.
 
+<div class="lastfm-embed" id="now-lastfm-widget">
+  <h3>Recently Played on Last.fm</h3>
+  <ol class="lastfm-items" aria-label="Recent completed scrobbles"></ol>
+  <p class="lastfm-status" role="status"></p>
+  <p><a href="https://www.last.fm/user/rudrakabir">View my listening history on Last.fm</a></p>
+</div>
+<style>
+  #now-lastfm-widget { max-width: 500px; padding: 15px; margin: 15px 0; border: 1px solid #ddd; border-radius: 8px; background: #f9f9f9; font-family: Arial, sans-serif; color: #34495e; }
+  #now-lastfm-widget h3 { margin-top: 0; color: #2c3e50; }
+  #now-lastfm-widget .lastfm-items { list-style: none; padding: 0; margin: 0; }
+  #now-lastfm-widget li { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #eee; }
+  #now-lastfm-widget li:last-child { border-bottom: 0; }
+  #now-lastfm-widget img { width: 48px; height: 48px; flex: 0 0 48px; object-fit: cover; border-radius: 3px; }
+  #now-lastfm-widget .lastfm-details { min-width: 0; overflow-wrap: anywhere; }
+  #now-lastfm-widget .lastfm-title { font-weight: bold; }
+  #now-lastfm-widget .lastfm-meta { font-size: .85em; }
+  #now-lastfm-widget p { margin: 5px 0; }
+  #now-lastfm-widget .lastfm-status:empty { display: none; }
+</style>
+<script>
+(() => {
+  const widget = document.getElementById('now-lastfm-widget');
+  const target = widget.querySelector('.lastfm-items');
+  const status = widget.querySelector('.lastfm-status');
+  const feed = 'https://raw.githubusercontent.com/rudrakabir/LastFM-Embed/codex/lastfm-feed/lastfm_data.json';
+  function safeURL(value, hosts) {
+    if (typeof value !== 'string') return null;
+    try {
+      const url = new URL(value);
+      return url.protocol === 'https:' && hosts.includes(url.hostname) &&
+        !url.username && !url.password && !url.port && !url.search && !url.hash ? url : null;
+    } catch (_) { return null; }
+  }
+  function card(item) {
+    if (!item || typeof item.title !== 'string' || !item.title.trim() ||
+        typeof item.artist !== 'string' || !item.artist.trim() ||
+        typeof item.album !== 'string' || !Number.isSafeInteger(item.played_at) || item.played_at <= 0) {
+      throw new Error('Invalid scrobble');
+    }
+    const link = safeURL(item.url, ['www.last.fm', 'last.fm']);
+    if (!link || !link.pathname.startsWith('/music/')) throw new Error('Invalid track link');
+    const row = document.createElement('li');
+    const art = safeURL(item.image, ['lastfm.freetls.fastly.net']);
+    if (art && !art.pathname.includes('2a96cbd8b46e442fc41c2b86b821562f')) {
+      const image = document.createElement('img');
+      image.alt = '';
+      image.width = image.height = 48;
+      image.loading = 'lazy';
+      image.referrerPolicy = 'no-referrer';
+      image.addEventListener('error', () => image.remove(), { once: true });
+      image.src = art.href;
+      row.append(image);
+    }
+    const details = document.createElement('div');
+    details.className = 'lastfm-details';
+    const title = document.createElement('a');
+    title.className = 'lastfm-title';
+    title.href = link.href;
+    title.textContent = item.title;
+    const meta = document.createElement('div');
+    meta.className = 'lastfm-meta';
+    meta.textContent = item.artist + (item.album ? ' · ' + item.album : '');
+    details.append(title, meta);
+    row.append(details);
+    return row;
+  }
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 10000);
+  fetch(feed, { credentials: 'omit', signal: controller.signal })
+    .then(response => {
+      if (!response.ok) throw new Error('Feed unavailable');
+      return response.json();
+    })
+    .then(data => {
+      if (data.version !== 1 || data.user !== 'rudrakabir' || !Array.isArray(data.items) || data.items.length !== 5) {
+        throw new Error('Invalid feed');
+      }
+      const rows = data.items.map(card);
+      target.replaceChildren(...rows);
+    })
+    .catch(() => { status.textContent = 'Recent tracks are temporarily unavailable.'; })
+    .finally(() => clearTimeout(timeout));
+})();
+</script>
+
 
 # Reading
 I am working my way through Human Universals, by Donald Brown. I came across it from the wikipedia article on Human Universals, which I thought was really interesting. Basically, there are certain things that cultures develop independently, called universals. 
@@ -105,4 +190,4 @@ Includes but not limited to climate change, AI S-risk, and of course the usual s
 })();
 </script>
 
-Inspired by [sive.rs](https://sive.rs/now) but with my own spin on it. 
+Inspired by [sive.rs](https://sive.rs/now) but with my own spin on it.
