@@ -47,7 +47,7 @@ I am really enjoying Sabrina Carpenter right now, as well as the movie album fro
   const widget = document.getElementById('now-lastfm-widget');
   const target = widget.querySelector('.lastfm-items');
   const status = widget.querySelector('.lastfm-status');
-  const feed = 'https://raw.githubusercontent.com/rudrakabir/LastFM-Embed/codex/lastfm-feed/lastfm_data.json';
+  const feed = 'https://raw.githubusercontent.com/rudrakabir/LastFM-Embed/main/lastfm_data.json';
   function safeURL(value, hosts) {
     if (typeof value !== 'string') return null;
     try {
@@ -190,4 +190,4 @@ Includes but not limited to climate change, AI S-risk, and of course the usual s
 })();
 </script>
 
-Inspired by [sive.rs](https://sive.rs/now) but with my own spin on it.
+Inspired by [sive.rs](https://sive.rs/now) but with my own spin on it. 
