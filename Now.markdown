@@ -3,20 +3,25 @@ layout: page
 title: Now
 permalink: /Now/
 ---
-Updated 11th Oct, 2024 on a rainy morning in Ahmedabad.
+Updated 11 Nov, 2027 on a hot evening in Dar es Salaam.
 
-# Dance and Garba
-This year was the first time I actively and enthusiastically participated in Navratri dancing and Garba, and I really really enjoyed it. I didn't know my body could move like that. 
+# Saanjha 
+A lot of this year has been about setting up an ecological repository and syntropic agroforestry project with my family in rural Gujarat. It has been a fun and rewarding journey with many ups and downs.
+
 
 # Building an online identity
-I am gradually getting more comfortable with putting myself out there on the Wild Wild Web, and letting myself be perceived to further my plans for world domination. So far, it is not so bad. 
+I set up my first intentionally public instagram account (@kabirontap) and discovered how hard it is to "make content". I quickly lost steam and am yet to find it again.
 
-# Website
-I've been noodling about on this website as a live server on my local machine for a few months now, for no particular reason. I think I spent a couple weeks just making the same posts in different static site generators just to check it out. It's not done yet, but it's a great start and I love it. [Just get it down](https://darn.es/just-get-it-done/), something I read just today, captures this well. 
 
+# AI
+I have been loving the latest model updates over the past year, and am bullish on AI's transformational power in myself and society at large. At the same time my p(doom) is non zero and my timelines are short, idk how it all pans out.
+
+
+# Tanzania!
+I have spent over a month here in Tanzania since the beginning of October, and I am completely shocked by how (missing the forest for the trees) my image of Africa was. Despite many close friends (and my girlfriend) being from various parts of the continent, tons of youtube,  nothing could have prepared me for the reality of it. It's incredible and amazing. (More in notes)
 
 # Body
-I have been heavily focused on taking care of my body. I started going to the gym regularly, worked on fixing my diet and sleep schedules, and the payoff has been marvelous. I also went to Himachal for a month in June for a Yoga course, to further that same quest. I am absolutely loving that, and I have reaped so much from it. 
+After a shoulder injury on a trip to Goa, 
 
 # Music
 [last.fm](https://www.last.fm/user/rudrakabir) is basically a direct conduit into what the inside of my head feels like which is kinda wack if you ask me.
