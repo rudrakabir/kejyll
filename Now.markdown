@@ -21,7 +21,7 @@ I have been loving the latest model updates over the past year, and am bullish o
 I have spent over a month here in Tanzania since the beginning of October, and I am completely shocked by how (missing the forest for the trees) my image of Africa was. Despite many close friends (and my girlfriend) being from various parts of the continent, tons of youtube,  nothing could have prepared me for the reality of it. It's incredible and amazing. (More in notes)
 
 # Body
-After a shoulder injury on a trip to Goa, 
+After a shoulder injury on a trip to Goa, i have spent the last year really bummed about not going to the gym. but I'm way better now, and should be back soon hell yea
 
 # Music
 [last.fm](https://www.last.fm/user/rudrakabir) is basically a direct conduit into what the inside of my head feels like which is kinda wack if you ask me.
