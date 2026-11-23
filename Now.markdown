@@ -117,6 +117,8 @@ I am really enjoying Sabrina Carpenter right now, as well as the movie album fro
 # Reading
 I am working my way through Human Universals, by Donald Brown. I came across it from the wikipedia article on Human Universals, which I thought was really interesting. Basically, there are certain things that cultures develop independently, called universals. 
 
+<a class="twitter-timeline" href="https://x.com/rudrakabir?ref_src=twsrc%5Etfw">Posts by rudrakabir</a> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+
 
 
 ## X-risk
